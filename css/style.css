@@ -1,0 +1,131 @@
+/* General settings */
+:root {
+  --color-primary: #b14c7b;
+  --color-primary-dark: #5e2540;
+
+  --color-black: #262626;
+  --color-white: #f4f4f4;
+
+  --color-neutral-dark: #a8886e;
+  --color-neutral-darker: #f9dac5;
+  --color-neutral-lighter: #fdf1eb;
+
+  --color-highlight: #c59db8;
+  --color-green: #92b279;
+
+  --font-family-headings: "League Spartan", sans-serif;
+  --font-family-primary: "Montserrat", sans-serif;
+
+  --font-size-small: 12px;
+  --font-weight-thin: 200;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  background-color: var(--color-neutral-darker);
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+#hamburger-nav-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 15px;
+}
+
+#hamburger,
+#xmark {
+  background-color: inherit;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.search-game {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search-game input {
+  padding: 5px;
+}
+
+#hamburger-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 10px 15px;
+}
+
+#hamburger-nav a,
+#hamburger-nav i {
+  color: var(--color-white);
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-user i {
+  font-size: 25px;
+}
+
+.main-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+}
+
+.main-nav nav{
+    min-height: 50%;
+}
+
+.main-nav li {
+  padding: 10px 0;
+}
+
+.main-nav li:hover, .main-nav li:hover a {
+  background-color: var(--color-highlight);
+  color: var(--color-black);
+}
+.main-nav a {
+  text-decoration: none;
+}
+
+.main-nav .logout{
+    align-self: flex-end;
+}
+
+.main-nav .logout a {
+    font-size: 20px;
+}
