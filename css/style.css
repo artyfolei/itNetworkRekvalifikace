@@ -46,9 +46,8 @@ ol {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  padding: 10px 15px;
+  align-items: flex-start;
+  width: 100%;
 }
 
 #hamburger,
@@ -58,20 +57,45 @@ ol {
   font-size: 1.5rem;
 }
 
+#hamburger-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+}
+
 .search-game {
   display: flex;
   align-items: center;
   gap: 5px;
+  max-width: 55%;
+  border: 1px solid black;
+  justify-self: flex-end;
 }
+
+.search-game button {
+  background-color: inherit;
+  border: none;
+  padding: 5px 0;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .search-game input {
   padding: 5px;
+  max-width: 80%;
 }
 
 #hamburger-nav {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   height: 100vh;
+  max-width: 250px;
 
   background-color: var(--color-primary-dark);
   color: var(--color-white);
@@ -98,23 +122,24 @@ ol {
   font-size: 25px;
 }
 
-.main-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    height: 100%;
+  height: 100%;
 }
 
-.main-nav nav{
-    min-height: 50%;
+.main-nav nav {
+  min-height: 50%;
 }
 
 .main-nav li {
   padding: 10px 0;
 }
 
-.main-nav li:hover, .main-nav li:hover a {
+.main-nav li:hover,
+.main-nav li:hover a {
   background-color: var(--color-highlight);
   color: var(--color-black);
 }
@@ -122,10 +147,10 @@ ol {
   text-decoration: none;
 }
 
-.main-nav .logout{
-    align-self: flex-end;
+.main-nav .logout {
+  align-self: flex-end;
 }
 
 .main-nav .logout a {
-    font-size: 20px;
+  font-size: 20px;
 }
