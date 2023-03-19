@@ -163,3 +163,10 @@ ol {
 .main-nav .logout a {
   font-size: 20px;
 }
+
+
+h1{
+  text-align: center;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
