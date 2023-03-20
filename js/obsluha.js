@@ -34,6 +34,11 @@ addGameForm.addEventListener("submit", function (e) {
   const hraJSON = JSON.stringify(hra);
   localStorage.setItem("hra", hraJSON);
 
-//   Informace pro uživatele
+  //   Informace pro uživatele
+  alert("Hra byla uložena");
+});
 
+const btnQuitForm = document.querySelector("#btn-quit-form");
+btnQuitForm.addEventListener("click", function () {
+  alert("Opravdu chcete opustit formulář? Data nebudou uložena...");
 });
