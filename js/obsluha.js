@@ -1,4 +1,5 @@
 import Hra from "./Hra.js";
+const gameList = new SeznamHer();
 
 // Obsluha responzivního hamburger menu
 const hamburgerBtn = document.querySelector("#hamburger");
@@ -36,8 +37,12 @@ addGameForm.addEventListener("submit", function (e) {
 
   //   Informace pro uživatele
   alert("Hra byla uložena");
+
+  // Aktualizace seznamu her
+  gameList.zobrazSeznamHer();
 });
 
+//   Informace pro uživatele
 const btnQuitForm = document.querySelector("#btn-quit-form");
 btnQuitForm.addEventListener("click", function () {
   alert("Opravdu chcete opustit formulář? Data nebudou uložena...");
