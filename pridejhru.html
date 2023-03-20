@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Ikony Fontawsome -->
+    <script
+      src="https://kit.fontawesome.com/f081504189.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styly -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/list.css" />
+    <link rel="stylesheet" href="css/query.css" />
+
+    <title>Přidej hru</title>
+  </head>
+  <body>
+    <header>
+      <section id="hamburger-nav-section">
+        <section id="hamburger-nav">
+          <div>
+            <button id="xmark">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <section class="main-nav">
+            <div class="nav-user">
+              <i class="fa-solid fa-circle-user"></i>
+              <div class=""><p>Martina Bezděková</p></div>
+            </div>
+            <nav>
+              <ul>
+                <li><a href="index.html">Seznam her</a></li>
+                <li>
+                  <a href="pridejhru.html" class="current-html">Přidej hru</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="logout">
+              <a href="#"
+                ><i class="fa-solid fa-arrow-right-from-bracket"></i
+              ></a>
+            </div>
+          </section>
+        </section>
+        <section id="hamburger-search">
+          <button id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <div class="search-game">
+            <input type="search" placeholder="hledej hru" />
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </section>
+      </section>
+      <section class="main-nav">
+        <div class="nav-user">
+          <i class="fa-solid fa-circle-user"></i>
+          <div class=""><p>Martina Bezděková</p></div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Seznam her</a></li>
+            <li><a href="pridejhru.html" class="current-html">Přidej hru</a></li>
+          </ul>
+        </nav>
+
+        <div class="logout">
+          <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </div>
+      </section>
+    </header>
+    <main>
+      <h1>Přidej hru</h1>
+      <form action="" class="main-form" id="add-game-form">
+        <section>
+          <div class="form-icon-box"><i class="fa-solid fa-book-open"></i></div>
+          <div class="form-inputs-box">
+            <h2>Název hry</h2>
+            <input
+              type="text"
+              id="nazev-hry"
+              name="nazevHry"
+              placeholder="Název hry..."
+            />
+            <label for="nazev-hry"></label>
+          </div>
+        </section>
+
+        <section>
+          <div class="form-icon-box"><i class="fa-solid fa-bullseye"></i></div>
+          <div class="form-inputs-box">
+            <h2>Cíle hry</h2>
+            <input
+              type="text"
+              id="cile-hry"
+              name="cileHry"
+              placeholder="Cíle hry..."
+            />
+            <label for="cile-hry"></label>
+          </div>
+        </section>
+
+        <section>
+          <div class="form-icon-box"><i class="fa-solid fa-pen-ruler"></i></div>
+          <div class="form-inputs-box">
+            <h2>Materiál</h2>
+            <input
+              type="text"
+              id="material-hry"
+              name="materialHry"
+              placeholder="Potřebný materiál..."
+            />
+            <label for="material-hry"></label>
+          </div>
+        </section>
+
+        <section>
+          <div class="form-icon-box">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <div class="form-inputs-box">
+            <h2>Popis</h2>
+            <textarea
+              id="popis-hry"
+              name="popisHry"
+              cols="40"
+              rows="10"
+              placeholder="Popis hry..."
+            ></textarea>
+            <label for="popis-hry"></label>
+          </div>
+        </section>
+
+        <section>
+          <div class="form-icon-box"><i class="fa-solid fa-globe"></i></div>
+          <div class="form-inputs-box">
+            <h2>Zdroje</h2>
+            <input
+              type="text"
+              id="zdroje-hry"
+              name="zdrojeHry"
+              placeholder="Odkud hra pochází/odkud ji máš?"
+            />
+            <label for="zdroje-hry"></label>
+          </div>
+        </section>
+
+        <section class="btns-section">
+          <button class="btn-quit">
+            <i class="fa-solid fa-xmark"></i> Zpět
+          </button>
+          <button type="submit" class="btn-save">
+            <i class="fa-solid fa-floppy-disk"></i> Ulož
+          </button>
+        </section>
+      </form>
+    </main>
+    <script src="js/obsluha.js"></script>
+  </body>
+</html>
