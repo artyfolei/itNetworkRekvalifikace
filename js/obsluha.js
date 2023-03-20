@@ -1,13 +1,39 @@
+import Hra from "./Hra.js";
+
+// Obsluha responzivního hamburger menu
 const hamburgerBtn = document.querySelector("#hamburger");
 const xMarkBtn = document.querySelector("#xmark");
 const hamburgerNav = document.querySelector("#hamburger-nav");
 
 hamburgerBtn.addEventListener("click", function () {
-    xMarkBtn.style.display = "flex";
-    hamburgerNav.style.display = "flex";
-  });
-  
-  xMarkBtn.addEventListener("click", function(){
-      xMarkBtn.style.display = "none"
-      hamburgerNav.style.display = "none"
-  })
+  xMarkBtn.style.display = "flex";
+  hamburgerNav.style.display = "flex";
+});
+
+xMarkBtn.addEventListener("click", function () {
+  xMarkBtn.style.display = "none";
+  hamburgerNav.style.display = "none";
+});
+
+// Obsluha formláře Přidej hru
+
+const addGameForm = document.querySelector("#add-game-form");
+
+// Vytvořit hru
+addGameForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  // sebrat data z formuláře ze všech inputů
+  const nazevHry = this.elements.nazevHry.value;
+  const cileHry = this.elements.cileHry.value;
+  const materialHry = this.elements.materialHry.value;
+  const popisHry = this.elements.popisHry.value;
+  const zdrojeHry = this.elements.zdrojeHry.value;
+
+  const hra = new Hra(nazevHry, cileHry, materialHry, popisHry, zdrojeHry);
+  // Převést na řetězec a uložit do local storage
+  const hraJSON = JSON.stringify(hra);
+  localStorage.setItem("hra", hraJSON);
+
+//   Informace pro uživatele
+
+});
