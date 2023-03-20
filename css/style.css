@@ -78,6 +78,8 @@ ol {
   padding: 5px 0;
   font-size: 16px;
 
+  color: var(--color-black);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,4 +171,6 @@ h1{
   text-align: center;
   color: var(--color-primary);
   text-transform: uppercase;
+
+  padding: 5px;
 }
