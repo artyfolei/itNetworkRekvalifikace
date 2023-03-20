@@ -1,12 +1,17 @@
-class SeznamHer {
+export default class SeznamHer {
   constructor() {
     //   SeznamHer si bere hry z LocalStorage -> později ze serveru
-    this.hry = JSON.parse(localStorage.getItem("hra")) || [];
+    this.hry = JSON.parse(localStorage.getItem("hry")) || [];
   }
 
+  aktualizujSeznamHer() {
+    // aktualizace seznamu her z localStorage
+    const localStorageHry = JSON.parse(localStorage.getItem("hry")) || [];
+    this.hry = localStorageHry;
+  }
   zobrazSeznamHer() {
     const gameListElement = document.querySelector("#gameList");
-    gameListElement.innerHTML = "";
+    // gameListElement.innerHTML = "";
 
     for (let hra of this.hry) {
       const gameListRow = document.createElement("section");
