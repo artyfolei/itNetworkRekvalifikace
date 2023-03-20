@@ -42,8 +42,6 @@ ol {
   list-style-type: none;
 }
 
-
-
 #hamburger-nav-section {
   position: relative;
   display: flex;
@@ -169,15 +167,50 @@ ol {
   font-size: 20px;
 }
 
-
-h1{
+h1 {
   text-align: center;
-  color: var(--color-primary);
   text-transform: uppercase;
-
-  padding: 5px;
+  padding: 10px 0;
 }
 
-.current-html{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-primary);
+  font-family: var(--font-family-headings);
+  font-weight: 600;
+}
+
+button {
+  padding: 10px;
+  font-family: var(--font-family-primary);
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 3px 1px 8px var(--color-neutral-dark);
+}
+
+.btn-save {
+  background-color: var(--color-green);
+  color: var(--color-black);
+}
+
+.btn-quit {
+  background-color: var(--color-neutral-dark);
+  color: var(--color-neutral-darker);
+}
+.current-html {
   border-bottom: 1px solid var(--color-white);
 }

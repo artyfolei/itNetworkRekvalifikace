@@ -11,7 +11,7 @@
 
   .main-nav {
     display: flex;
-    position: sticky;
+    position: fixed;
     justify-self: flex-start;
   }
 
