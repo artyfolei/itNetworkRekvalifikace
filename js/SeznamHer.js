@@ -4,17 +4,18 @@ export default class SeznamHer {
     this.hry = JSON.parse(localStorage.getItem("hry")) || [];
   }
 
-  aktualizujSeznamHer() {
-    // aktualizace seznamu her z localStorage
-    const localStorageHry = JSON.parse(localStorage.getItem("hry")) || [];
-    this.hry = localStorageHry;
+  pridejHruDoSeznamu(hra) {
+    this.hry.push(hra);
+    localStorage.setItem("hry",JSON.stringify(this.hry));
   }
+
+
   zobrazSeznamHer() {
-    const gameListElement = document.querySelector("#gameList");
+    let gameListElement = document.querySelector("#gameList");
     // gameListElement.innerHTML = "";
 
     for (let hra of this.hry) {
-      const gameListRow = document.createElement("section");
+      let gameListRow = document.createElement("section");
       gameListRow.classList.add("list-row");
 
       const gameName = document.createElement("p");
@@ -25,7 +26,7 @@ export default class SeznamHer {
       gameGoals.classList.add("game-goals");
       gameGoals.innerHTML = hra.cileHry;
 
-      const gameIconBox = document.createElement("div");
+      let gameIconBox = document.createElement("div");
       gameIconBox.classList.add("list-icon-box");
       for (let i = 1; i <= 3; i++) {
         const gameIcon = document.createElement("i");

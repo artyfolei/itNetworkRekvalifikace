@@ -3,6 +3,7 @@ import SeznamHer from "./SeznamHer.js";
 const gameList = new SeznamHer();
 
 document.addEventListener("DOMContentLoaded", function () {
+  gameList.zobrazSeznamHer();
   // Obsluha responzivního hamburger menu
   const hamburgerBtn = document.querySelector("#hamburger");
   const xMarkBtn = document.querySelector("#xmark");
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Vytvořit hru
   addGameForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    // sebrat data z formuláře ze všech inputů  
+    // sebrat data z formuláře ze všech inputů
     const nazevHry = this.elements.nazevHry.value;
     const cileHry = this.elements.cileHry.value;
     const materialHry = this.elements.materialHry.value;
@@ -34,14 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const hra = new Hra(nazevHry, cileHry, materialHry, popisHry, zdrojeHry);
 
     // Převést na řetězec a uložit do local storage
-
-    localStorage.setItem("hry", JSON.stringify(gameList.hry.push(hra)));
+    gameList.pridejHruDoSeznamu(hra);
 
     // Informace pro uživatele
     alert("Hra byla uložena");
 
     // Aktualizace seznamu her
-    gameList.aktualizujSeznamHer();
     gameList.zobrazSeznamHer();
   });
 
