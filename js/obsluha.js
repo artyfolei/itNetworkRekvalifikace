@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
   addGameForm.addEventListener("submit", function (e) {
     e.preventDefault();
     // sebrat data z formuláře ze všech inputů
-    const nazevHry = this.elements.nazevHry.value;
-    const cileHry = this.elements.cileHry.value;
-    const materialHry = this.elements.materialHry.value;
-    const popisHry = this.elements.popisHry.value;
-    const zdrojeHry = this.elements.zdrojeHry.value;
+    const nazevHry = addGameForm.nazevHry.value;
+    const cileHry = addGameForm.cileHry.value;
+    const materialHry = addGameForm.materialHry.value;
+    const popisHry = addGameForm.popisHry.value;
+    const zdrojeHry = addGameForm.zdrojeHry.value;
 
     const hra = new Hra(nazevHry, cileHry, materialHry, popisHry, zdrojeHry);
 
