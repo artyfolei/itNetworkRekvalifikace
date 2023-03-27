@@ -20,19 +20,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Obsluha formláře Přidej hru
-  const addGameForm = document.querySelector("#add-game-form");
+  const addGameForm = document.getElementById("add-game-form");
+  console.log(addGameForm);
 
   // Vytvořit hru
-  addGameForm.addEventListener("submit", function (e) {
+  addGameForm.addEventListener("submit", (e)  =>{
+    console.log("FOMRULÁř ODESLÁN")
     e.preventDefault();
-    // sebrat data z formuláře ze všech inputů
+    //sebrat data z formuláře ze všech inputů
     const nazevHry = addGameForm.nazevHry.value;
     const cileHry = addGameForm.cileHry.value;
     const materialHry = addGameForm.materialHry.value;
     const popisHry = addGameForm.popisHry.value;
     const zdrojeHry = addGameForm.zdrojeHry.value;
+  
 
     const hra = new Hra(nazevHry, cileHry, materialHry, popisHry, zdrojeHry);
+    
 
     // Převést na řetězec a uložit do local storage
     gameList.pridejHruDoSeznamu(hra);

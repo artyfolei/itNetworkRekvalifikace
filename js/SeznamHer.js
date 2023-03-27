@@ -35,7 +35,7 @@ export default class SeznamHer {
       }
 
       gameListRow.append(gameName, gameGoals, gameIconBox);
-      gameListElement.append(gameListRow);
+      gameListElement.appendChild(gameListRow);
     }
   }
 }
